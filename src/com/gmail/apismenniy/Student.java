@@ -1,5 +1,7 @@
 package com.gmail.apismenniy;
 
+import java.util.Scanner;
+
 public class Student extends Human{
     private String groupName;
     private long id;
@@ -36,4 +38,5 @@ public class Student extends Human{
                  '\'' +
                 "id=" + id + super.toString() + '}';
     }
+
 }

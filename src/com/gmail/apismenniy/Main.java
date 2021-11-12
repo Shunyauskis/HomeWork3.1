@@ -1,6 +1,6 @@
 package com.gmail.apismenniy;
 
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
 
@@ -29,9 +29,10 @@ public class Main {
         economical.addStudent(studentSeven);
         economical.addStudent(studentEight);
         economical.addStudent(studentNine);
-        economical.addStudent(studentTen);
+//        economical.addStudent(studentTen);
 //        economical.addStudent(studentEleven);
 //        economical.addStudent(studentTwelve);
+        economical.studentFromKeyboard();
 
         System.out.println();
         System.out.println(economical.toString());
@@ -39,10 +40,12 @@ public class Main {
         economical.sortStudentsByLastName();
         System.out.println(economical.toString());
 
-        System.out.println(economical.searchByLastName("Andersn"));
+        System.out.println(economical.searchByLastName("Anderson"));
         System.out.println();
 
-        economical.deleteStudent(566789);
+        economical.deleteStudent(566782);
         System.out.println(economical.toString());
+
     }
+
 }

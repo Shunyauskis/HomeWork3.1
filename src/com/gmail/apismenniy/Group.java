@@ -2,6 +2,7 @@ package com.gmail.apismenniy;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Scanner;
 
 public class Group {
     private Student [] students = new Student[10];
@@ -74,18 +75,56 @@ public class Group {
             if (students[i] != null && lastName.equals(students[i].getLastName())) {
                     return students[i];
                 } else {throw new NoSuchStudentException("No such student");
-
                 }
-
             }
-
         return null;
     }
-
-
     public void sortStudentsByLastName(){
         Arrays.sort(students, Comparator.nullsFirst (new SortStudentsByLastNameComparator()));
     }
+    public void studentFromKeyboard() throws GroupOverflowException{
+        Scanner sc = new Scanner(System.in);
+        Student student = new Student();
 
+        int counter = 1;
+        for (int i = 0; i<students.length; i++) {
+            if (students[i] == null) {
+                students[i] = student;
+
+                System.out.println("Please enter name");
+                student.setName(sc.nextLine());
+
+                System.out.println("Please enter last name");
+                student.setLastName(sc.nextLine());
+
+                for (;;) {
+                    try {
+
+                        System.out.println("Please enter gender");
+                        student.setGender(com.gmail.apismenniy.Gender.valueOf(sc.nextLine()));
+
+                    } catch
+                    (IllegalArgumentException e) {
+                        System.out.println("Please enter MALE or FEMALE");
+
+                    }break;
+
+                }
+
+                    System.out.println("Please enter group name");
+                    student.setGroupName(sc.nextLine());
+
+                    System.out.println("Please enter ID");
+                    student.setId(sc.nextLong());
+
+                counter++;
+                if (counter > students.length) {
+                    throw new GroupOverflowException("The group is full");
+                }
+            }
+
+        }
+
+    }
 }
 
