@@ -18,6 +18,9 @@ public class Main {
         Student studentTen = new Student("Pamela", "Anderson", Gender.FEMALE, "Economical", 566790L);
         Student studentEleven = new Student("Alla", "Pugacheva", Gender.FEMALE, "Economical", 566791L);
         Student studentTwelve = new Student("Denzel", "Washington", Gender.MALE, "Economical", 566792L);
+
+
+
         Group economical = new Group("economical");
 
         economical.addStudent(studentOne);
@@ -32,7 +35,8 @@ public class Main {
 //        economical.addStudent(studentTen);
 //        economical.addStudent(studentEleven);
 //        economical.addStudent(studentTwelve);
-        economical.studentFromKeyboard();
+        economical.addStudent(AddStudentFromKeyboard.addStudentFromKeyboard());
+
 
         System.out.println();
         System.out.println(economical.toString());
@@ -40,7 +44,7 @@ public class Main {
         economical.sortStudentsByLastName();
         System.out.println(economical.toString());
 
-        System.out.println(economical.searchByLastName("Anderson"));
+        System.out.println(economical.searchByLastName("Tyson"));
         System.out.println();
 
         economical.deleteStudent(566782);
