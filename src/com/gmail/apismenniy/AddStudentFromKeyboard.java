@@ -1,6 +1,5 @@
 package com.gmail.apismenniy;
 
-import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

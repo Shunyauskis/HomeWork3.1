@@ -73,11 +73,10 @@ public class Group {
         for (int i = 0; i < students.length; i++) {
             if (students[i] != null && lastName.equals(students[i].getLastName())) {
                     return students[i];
-                } else {throw new NoSuchStudentException("No such student");
                 }
-            }
-        return null;
-    }
+            } throw new NoSuchStudentException("No such student");
+        }
+
     public void sortStudentsByLastName(){
         Arrays.sort(students, Comparator.nullsFirst (new SortStudentsByLastNameComparator()));
     }

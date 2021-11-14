@@ -1,7 +1,5 @@
 package com.gmail.apismenniy;
 
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) throws GroupOverflowException, NoSuchStudentException {
@@ -32,10 +30,10 @@ public class Main {
         economical.addStudent(studentSeven);
         economical.addStudent(studentEight);
         economical.addStudent(studentNine);
-//        economical.addStudent(studentTen);
+        economical.addStudent(studentTen);
 //        economical.addStudent(studentEleven);
 //        economical.addStudent(studentTwelve);
-        economical.addStudent(AddStudentFromKeyboard.addStudentFromKeyboard());
+//        economical.addStudent(AddStudentFromKeyboard.addStudentFromKeyboard());
 
 
         System.out.println();
@@ -44,10 +42,10 @@ public class Main {
         economical.sortStudentsByLastName();
         System.out.println(economical.toString());
 
-        System.out.println(economical.searchByLastName("Tyson"));
+        System.out.println("Searched student is "+economical.searchByLastName("Tyson"));
         System.out.println();
 
-        economical.deleteStudent(566782);
+        economical.deleteStudent(566789);
         System.out.println(economical.toString());
 
     }
