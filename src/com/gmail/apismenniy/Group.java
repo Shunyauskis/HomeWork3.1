@@ -59,12 +59,13 @@ public class Group {
         }
 
 
-    public Student deleteStudent(long id) {
-        for (int i = 0; i<students.length; i++){
-            if(students[i].getId() == id){
-                students[i] = null;
+    public Student deleteStudent(long id){
+            for (int i = 0; i < students.length; i++) {
+                if (students[i] !=null && students[i].getId() == id) {
+                    students[i] = null;
+                }
             }
-        }
+
         return null;
     }
 

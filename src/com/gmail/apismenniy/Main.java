@@ -17,20 +17,18 @@ public class Main {
         Student studentEleven = new Student("Alla", "Pugacheva", Gender.FEMALE, "Economical", 566791L);
         Student studentTwelve = new Student("Denzel", "Washington", Gender.MALE, "Economical", 566792L);
 
-
-
         Group economical = new Group("economical");
 
-        economical.addStudent(studentOne);
-        economical.addStudent(studentTwo);
-        economical.addStudent(studentThree);
-        economical.addStudent(studentFour);
-        economical.addStudent(studentFive);
-        economical.addStudent(studentSix);
-        economical.addStudent(studentSeven);
-        economical.addStudent(studentEight);
-        economical.addStudent(studentNine);
-        economical.addStudent(studentTen);
+    economical.addStudent(studentOne);
+    economical.addStudent(studentTwo);
+    economical.addStudent(studentThree);
+    economical.addStudent(studentFour);
+    economical.addStudent(studentFive);
+    economical.addStudent(studentSix);
+    economical.addStudent(studentSeven);
+    economical.addStudent(studentEight);
+    economical.addStudent(studentNine);
+//    economical.addStudent(studentTen);
 //        economical.addStudent(studentEleven);
 //        economical.addStudent(studentTwelve);
 //        economical.addStudent(AddStudentFromKeyboard.addStudentFromKeyboard());
@@ -45,8 +43,17 @@ public class Main {
         System.out.println("Searched student is "+economical.searchByLastName("Tyson"));
         System.out.println();
 
-        economical.deleteStudent(566789);
         System.out.println(economical.toString());
+
+        studentSix.toCSVString();
+
+        Student studentFourteen = new Student();
+        studentFourteen.fromCSVString();
+        System.out.println(studentFourteen);
+        System.out.println();
+
+        economical.deleteStudent(566786);
+        System.out.println(economical);
 
     }
 
