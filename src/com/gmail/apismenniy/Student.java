@@ -92,7 +92,7 @@ public class Student extends Human implements CSVConverter {
             setId(Long.parseLong(strng[i + 4]));
         }
 
-        return new Student();
+        return new Student(getName(), getLastName(), getGender(), getGroupName(), getId());
     }
 
     @Override

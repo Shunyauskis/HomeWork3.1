@@ -58,8 +58,7 @@ public class Main {
         System.out.println(studentFive.toCSVString());
         System.out.println();
 
-        Student studentFifteen = new Student();
-        studentFifteen.fromCSVString(studentFour.toCSVString());
+        Student studentFifteen = new Student().fromCSVString(studentFour.toCSVString());
         System.out.println(studentFifteen);
 
     }
