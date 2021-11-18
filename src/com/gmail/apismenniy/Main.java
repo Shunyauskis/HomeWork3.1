@@ -26,7 +26,7 @@ public class Main {
     economical.addStudent(studentFive);
     economical.addStudent(studentSix);
     economical.addStudent(studentSeven);
-    economical.addStudent(studentEight);
+   // economical.addStudent(studentEight);
     economical.addStudent(studentNine);
 //    economical.addStudent(studentTen);
 //        economical.addStudent(studentEleven);
@@ -45,15 +45,22 @@ public class Main {
 
         System.out.println(economical.toString());
 
-        studentSix.toCSVString();
+        studentSix.toCSVFile();
 
         Student studentFourteen = new Student();
-        studentFourteen.fromCSVString();
+        studentFourteen.fromCSVFile();
         System.out.println(studentFourteen);
         System.out.println();
 
         economical.deleteStudent(566786);
         System.out.println(economical);
+
+        System.out.println(studentFive.toCSVString());
+        System.out.println();
+
+        Student studentFifteen = new Student();
+        studentFifteen.fromCSVString(studentFour.toCSVString());
+        System.out.println(studentFifteen);
 
     }
 
